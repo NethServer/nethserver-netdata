@@ -1,0 +1,16 @@
+[global]
+    run as user = netdata
+
+    # the default database size - 1 hour
+    history = 3600
+
+    # by default do not expose the netdata port
+    bind to = {{$netdata{'Bind'}}}
+
+[web]
+    web files owner = root
+    web files group = netdata
+
+[health]
+    enabled = {{$netdata{'Alarms'} eq 'enabled' ? 'yes' : 'no'}}
+
