@@ -32,3 +32,10 @@ templates2events("/etc/netdata/netdata.conf", $event);
 event_services($event, 'netdata' => 'restart');
 event_actions($event, 'initialize-default-databases' => '00');
 
+#--------------------------------------------------
+# actions for firewall-adjust event
+#--------------------------------------------------
+
+$event = "firewall-adjust";
+
+event_services($event, 'netdata' => 'restart');
