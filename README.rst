@@ -25,6 +25,16 @@ Example: ::
     access=
     status=enabled
 
+Access from LAN
+===============
+
+To enable the access from LAN, execute the following: ::
+
+  config setprop netdata Bind 0.0.0.0 access green
+  signal-event nethserver-netdata-update
+  signal-event nethserver-firewall-adjust
+
+Access netdata from ``http://<server_green_ip>:19999``.
 
 Links
 =====
