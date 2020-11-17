@@ -15,6 +15,7 @@ Properties:
 
 - ``Bind``: bind IP addess, default to ``localhost``
 - ``Alarms``: can be ``enabled`` or ``disabled``. Default to ``disabled`` to avoid unwanted mail to root user
+- ``PythonPlugins``: a comma-separated list of key and value for python plugins. Example: ``apache:yes,sensors:no``
 
 Example: ::
 
@@ -23,6 +24,7 @@ Example: ::
     Bind=localhost
     TCPPort=19999
     access=
+    PythonPlugins=apache:yes,sensors:yes
     status=enabled
 
 Access from LAN

@@ -1,0 +1,10 @@
+#
+# 30python_plugins
+#
+{
+    my $python = $netdata{'PythonPlugins'} || '';
+    foreach (split(/,/, $python)) {
+        my ($k, $v) = split(/:/,$_);
+        $OUT .= "$k: $v\n";
+    }
+}
