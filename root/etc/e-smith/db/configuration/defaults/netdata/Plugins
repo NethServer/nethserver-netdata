@@ -1,0 +1,1 @@
+proc:yes,tc:yes,charts.d:yes,python.d:yes,idlejitter:no,cgroups:no,checks:no,apps:no,node.d:no
