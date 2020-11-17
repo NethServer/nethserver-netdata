@@ -29,6 +29,7 @@ use File::Path;
 my $event = "nethserver-netdata-update";
 
 templates2events("/etc/netdata/netdata.conf", $event);
+templates2events("/etc/netdata/conf.d/python.d.conf", $event);
 event_services($event, 'netdata' => 'restart');
 event_actions($event, 'initialize-default-databases' => '00');
 

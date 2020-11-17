@@ -15,14 +15,21 @@ Properties:
 
 - ``Bind``: bind IP addess, default to ``localhost``
 - ``Alarms``: can be ``enabled`` or ``disabled``. Default to ``disabled`` to avoid unwanted mail to root user
+- ``Plugins``: a comma-separated list of key and value for standard plugins. Example: ``tc:yes,charts.d:yes``
+- ``PythonPlugins``: a comma-separated list of key and value for python plugins. Example: ``apache:yes,sensors:no``
 
-Example: ::
+Please be careful when changing ``Plugins`` and ``PythonPlugins`` properties, because some plugins are used by Cockpit
+to create charts inside multiple pages.
+
+Database example: ::
 
  netdata=service
     Alarms=disabled
     Bind=localhost
     TCPPort=19999
     access=
+    Plugins=proc:yes,tc:yes,charts.d:yes,python.d:yes,idlejitter:no,cgroups:no,checks:no,apps:no,node.d:no
+    PythonPlugins=apache:yes,sensors:yes
     status=enabled
 
 Access from LAN
