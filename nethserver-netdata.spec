@@ -1,6 +1,6 @@
 Summary: NethServer netdata module
 Name: nethserver-netdata
-Version: 1.1.0
+Version: 2.0.0
 Release: 1%{?dist}
 License: GPL
 Source0: %{name}-%{version}.tar.gz
@@ -32,6 +32,9 @@ rm -rf %{buildroot}
 %dir %{_nseventsdir}/%{name}-update
 
 %changelog
+* Wed Nov 18 2020 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 2.0.0-1
+- Install netdata by default - NethServer/dev#6333
+
 * Wed Apr 10 2019 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 1.1.0-1
 - Support netdata 1.13 from EPEL
 
