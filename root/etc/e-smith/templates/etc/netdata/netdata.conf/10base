@@ -3,6 +3,10 @@
 
     # the default database size - 1 hour
     history = 3600
+    
+    # some defaults to run netdata with least priority
+    process scheduling policy = idle
+    OOM score = 1000
 
     # by default do not expose the netdata port
     bind to = {{$netdata{'Bind'}}}
@@ -11,7 +15,7 @@
 
 [web]
     web files owner = root
-    web files group = root
+    web files group = netdata
 
 [health]
     enabled = {{$netdata{'Alarms'} eq 'enabled' ? 'yes' : 'no'}}
