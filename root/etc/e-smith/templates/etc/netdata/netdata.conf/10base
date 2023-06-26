@@ -11,7 +11,7 @@
     # by default do not expose the netdata port
     bind to = {{$netdata{'Bind'}}}
 
-    stock config directory = /etc/netdata/conf.d
+    stock config directory = /usr/lib/netdata/conf.d
 
 [web]
     web files owner = root
@@ -20,4 +20,4 @@
 [health]
     enabled = {{$netdata{'Alarms'} eq 'enabled' ? 'yes' : 'no'}}
 
-    stock health configuration directory = /etc/netdata/conf.d/health.d
+    stock health configuration directory = /usr/lib/netdata/conf.d/health.d
