@@ -1,6 +1,6 @@
 Summary: NethServer netdata module
 Name: nethserver-netdata
-Version: 2.0.2
+Version: 2.0.3
 Release: 1%{?dist}
 License: GPL
 Source0: %{name}-%{version}.tar.gz
@@ -32,6 +32,9 @@ rm -rf %{buildroot}
 %dir %{_nseventsdir}/%{name}-update
 
 %changelog
+* Mon Jun 26 2023 Davide Principi <davide.principi@nethesis.it> - 2.0.3-1
+- Netdata fails to start after update - Bug NethServer/dev#6754
+
 * Thu Jun 24 2021 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 2.0.2-1
 - netdata update config overwrite - Bug NethServer/dev#6528
 
